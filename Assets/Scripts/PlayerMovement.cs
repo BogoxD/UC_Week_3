@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private void RotateTowardsMousePoint()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-        if(Physics.Raycast(ray, out RaycastHit hit, 100f, groundMask))
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f, groundMask))
         {
             transform.LookAt(hit.point);
         }
